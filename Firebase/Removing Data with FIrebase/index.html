@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "<Your Api key>",
+      authDomain: "<your-auth-domain>",
+      databaseURL: "<tour-database-url>",
+      projectId: "<your-project-id>",
+    };
+    firebase.initializeApp(config);
+  </script>
+  <title>Firebase</title>
+</head>
+
+<body>
+
+  <input type="text" id="demo">
+  <button type="button" onclick="add()">Add</button>
+
+  <ul id="list">
+
+  </ul>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
