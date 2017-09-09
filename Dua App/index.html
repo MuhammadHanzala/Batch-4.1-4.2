@@ -8,12 +8,7 @@
   <script>
     // Initialize Firebase
     var config = {
-      apiKey: "AIzaSyBu9yje7h8ArT2uLaxJQn0rB4IwP3azyyU",
-      authDomain: "react-challenge-55ec8.firebaseapp.com",
-      databaseURL: "https://react-challenge-55ec8.firebaseio.com",
-      projectId: "react-challenge-55ec8",
-      storageBucket: "react-challenge-55ec8.appspot.com",
-      messagingSenderId: "453319898280"
+
     };
     firebase.initializeApp(config);
   </script>
@@ -21,8 +16,11 @@
 </head>
 
 <body>
-  <h1>Login</h1>
-  
+  <h1>Sign Up</h1>
+  <div class="form-group">
+    <label for="exampleInputPassword1">User Name</label>
+    <input type="text" class="form-control" id="name" placeholder="UserName">
+  </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
@@ -38,7 +36,7 @@
       Check me out
     </label>
   </div>
-  <button type="submit" onclick="login()" class="btn btn-primary">Submit</button>
+  <button type="submit" onclick="signup()" class="btn btn-primary">Submit</button>
 
 
 
