@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+    crossorigin="anonymous">
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBu9yje7h8ArT2uLaxJQn0rB4IwP3azyyU",
+      authDomain: "react-challenge-55ec8.firebaseapp.com",
+      databaseURL: "https://react-challenge-55ec8.firebaseio.com",
+      projectId: "react-challenge-55ec8",
+      storageBucket: "react-challenge-55ec8.appspot.com",
+      messagingSenderId: "453319898280"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Welcome</h1>
+
+  <table border="1">
+      <tr>
+        <td>Name</td>
+        <td>Email</td>
+      </tr>
+      <tr>
+        <td id="nameRow"></td>
+        <td id="emailRow"></td>
+      </tr>
+  </table>
+    
+
+    <input type="text" id="sender">
+    <input type="text" id="commentBox">
+    <button onclick="submit()">Submit</button>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+    crossorigin="anonymous"></script>
+  <script src="home.js"></script>
+</body>
+
+</html>
