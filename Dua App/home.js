@@ -14,6 +14,8 @@ function submit(){
         sender: sender.value,
         dua: comment.value
     }
+    sender.value = '';
+    comment.value = '';
 
     database.child('posts').push(post);
 }
