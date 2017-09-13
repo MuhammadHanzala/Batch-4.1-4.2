@@ -5,43 +5,86 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
     crossorigin="anonymous">
 
-<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBu9yje7h8ArT2uLaxJQn0rB4IwP3azyyU",
-    authDomain: "react-challenge-55ec8.firebaseapp.com",
-    databaseURL: "https://react-challenge-55ec8.firebaseio.com",
-    projectId: "react-challenge-55ec8",
-    storageBucket: "react-challenge-55ec8.appspot.com",
-    messagingSenderId: "453319898280"
-  };
-  firebase.initializeApp(config);
-</script>
+  <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBu9yje7h8ArT2uLaxJQn0rB4IwP3azyyU",
+      authDomain: "react-challenge-55ec8.firebaseapp.com",
+      databaseURL: "https://react-challenge-55ec8.firebaseio.com",
+      projectId: "react-challenge-55ec8",
+      storageBucket: "react-challenge-55ec8.appspot.com",
+      messagingSenderId: "453319898280"
+    };
+    firebase.initializeApp(config);
+  </script>
   <title>Document</title>
 </head>
 
+<style>
+  #main {
+    margin: 0 auto;
+    background-color: #3E65CF;
+  }
+
+  #welcome {
+    color: #797676;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 5%;
+    text-transform: capitalize;
+  }
+  #btn{
+    color: #3230C0;
+    cursor: pointer;
+  }
+</style>
+
 <body>
-  <h1>Welcome</h1>
-  <button> <a href="posts.html">All Posts</a></button>
-  <table border="1">
-      <tr>
-        <td>Name</td>
-        <td>Email</td>
-      </tr>
-      <tr>
-        <td id="nameRow"></td>
-        <td id="emailRow"></td>
-      </tr>
-  </table>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3230C0;">
+    <a class="navbar-brand" href="#">Dua App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+      aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="posts.html">Feeds</a>
+        </li>
+      </ul>
+
+      <button type="button" class="btn btn-secondary" style="cursor: pointer;">Logout</button>
+
+    </div>
+  </nav>
+
+
+    <div>
+
+      
+      <h1 id="welcome"></h1>
+      
+      <div class="card text-white" id="main" style="max-width: 30rem;">
+        <div class="card-header">Create New Dua</div>
+        <div class="card-body">
+          <div class="form-group">
+            <div >
+              <input type="text" class="form-control" placeholder="Description" id="sender" required autofocus>
+              <textarea class="form-control" rows="5" placeholder="Your Dua..." id="commentBox" required></textarea>
+              <button type="button" class="btn btn-light btn-lg btn-block" id="btn" onclick="submit()">Post</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+
     
-
-    <input type="text" id="sender">
-    <input type="text" id="commentBox">
-    <button onclick="submit()">Submit</button>
-
-
-
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
